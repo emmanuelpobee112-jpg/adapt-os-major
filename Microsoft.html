@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Microsoft</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+        }
+
+        .container {
+            width: min(92%, 850px);
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.10);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-icon {
+            width: 62px;
+            height: 62px;
+            margin: 0 auto 15px;
+            border-radius: 14px;
+            background: #107c10;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+            color: #222;
+        }
+
+        .header p {
+            margin: 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .apps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .app-card {
+            padding: 25px 18px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            border-radius: 15px;
+            background: #fafafa;
+            transition: 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .app-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .powerpoint {
+            background: #d24726;
+        }
+
+        .word {
+            background: #185abd;
+        }
+
+        .excel {
+            background: #107c41;
+        }
+
+        .app-card h2 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            color: #222;
+        }
+
+        .app-card p {
+            margin: 0 0 18px;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .open-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .open-btn:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+        .ppt-btn {
+            background: #d24726;
+        }
+
+        .word-btn {
+            background: #185abd;
+        }
+
+        .excel-btn {
+            background: #107c41;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 25px 18px;
+            }
+
+            .apps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="header-icon">M</div>
+
+            <h1>Microsoft</h1>
+
+            <p>
+                Access Microsoft productivity tools from one place.
+            </p>
+        </div>
+
+        <div class="apps">
+
+            <!-- POWERPOINT -->
+            <div class="app-card">
+
+                <div class="app-icon powerpoint">
+                    P
+                </div>
+
+                <h2>PowerPoint</h2>
+
+                <p>
+                    Create, edit and present presentations online.
+                </p>
+
+                <a
+                    class="open-btn ppt-btn"
+                    href="https://powerpoint.cloud.microsoft/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open PowerPoint
+                </a>
+
+            </div>
+
+
+            <!-- WORD -->
+            <div class="app-card">
+
+                <div class="app-icon word">
+                    W
+                </div>
+
+                <h2>MS Word</h2>
+
+                <p>
+                    Create and edit professional documents online.
+                </p>
+
+                <a
+                    class="open-btn word-btn"
+                    href="https://word.cloud.microsoft/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open Word
+                </a>
+
+            </div>
+
+
+            <!-- EXCEL -->
+            <div class="app-card">
+
+                <div class="app-icon excel">
+                    X
+                </div>
+
+                <h2>Excel</h2>
+
+                <p>
+                    Create spreadsheets, calculate and analyze data online.
+                </p>
+
+                <a
+                    class="open-btn excel-btn"
+                    href="https://excel.cloud.microsoft/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open Excel
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

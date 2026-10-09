@@ -1,0 +1,3 @@
+User-agent:*
+Allow:/
+sitemap:https://adapt-personal-app.netlify.app/sitemap.xml

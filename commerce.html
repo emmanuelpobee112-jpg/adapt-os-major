@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Shopping</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f5f7, #e9ebef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .container {
+            width: min(1100px, 100%);
+            background: #ffffff;
+            padding: 42px;
+            border-radius: 24px;
+            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .main-icon {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 16px;
+            border-radius: 18px;
+            background: #111827;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,.15);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+            color: #171717;
+        }
+
+        .header p {
+            margin: 0;
+            color: #707070;
+            font-size: 14px;
+        }
+
+        .shopping-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .shop-card {
+            background: #fafafa;
+            border: 1px solid #e6e6e6;
+            border-radius: 18px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: .25s ease;
+        }
+
+        .shop-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.10);
+            background: #fff;
+        }
+
+        .shop-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .jumia {
+            background: #f68b1e;
+        }
+
+        .konga {
+            background: #ed1c24;
+        }
+
+        .amazon {
+            background: #232f3e;
+        }
+
+        .shop-card h2 {
+            margin: 0 0 8px;
+            font-size: 19px;
+            color: #202020;
+        }
+
+        .shop-card p {
+            margin: 0 auto 20px;
+            max-width: 250px;
+            color: #707070;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 9px;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: .2s ease;
+        }
+
+        .shop-btn:hover {
+            opacity: .88;
+            transform: translateY(-2px);
+        }
+
+        .jumia-btn {
+            background: #f68b1e;
+        }
+
+        .konga-btn {
+            background: #ed1c24;
+        }
+
+        .amazon-btn {
+            background: #232f3e;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .shopping-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 25px 15px;
+                border-radius: 18px;
+            }
+
+            .shopping-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <div class="main-icon">
+                🛒
+            </div>
+
+            <h1>Online Shopping</h1>
+
+            <p>
+                Explore popular online shopping platforms from one place.
+            </p>
+
+        </div>
+
+
+        <div class="shopping-grid">
+
+
+            <!-- JUMIA -->
+
+            <div class="shop-card">
+
+                <div class="shop-icon jumia">
+                    J
+                </div>
+
+                <h2>Jumia</h2>
+
+                <p>
+                    Shop electronics, fashion, phones, beauty products,
+                    home items and more.
+                </p>
+
+                <a
+                    href="https://www.jumia.com.gh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="shop-btn jumia-btn"
+                >
+                    Shop Jumia
+                </a>
+
+            </div>
+
+
+            <!-- KONGA -->
+
+            <div class="shop-card">
+
+                <div class="shop-icon konga">
+                    K
+                </div>
+
+                <h2>Konga</h2>
+
+                <p>
+                    Explore electronics, fashion, phones, appliances,
+                    groceries and other products.
+                </p>
+
+                <a
+                    href="https://www.konga.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="shop-btn konga-btn"
+                >
+                    Shop Konga
+                </a>
+
+            </div>
+
+
+            <!-- AMAZON -->
+
+            <div class="shop-card">
+
+                <div class="shop-icon amazon">
+                    A
+                </div>
+
+                <h2>Amazon</h2>
+
+                <p>
+                    Explore the global Amazon marketplace for a huge
+                    range of products.
+                </p>
+
+                <a
+                    href="https://www.amazon.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="shop-btn amazon-btn"
+                >
+                    Shop Amazon
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+            Select a shopping platform to continue.
+        </div>
+
+    </div>
+
+</body>
+</html>

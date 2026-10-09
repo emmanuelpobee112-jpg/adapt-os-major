@@ -1,0 +1,3430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ADAPT OS Student Edition — A modern student productivity, learning, research and academic management platform."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b1020"
+    >
+
+    <title>ADAPT OS — Student Edition</title>
+
+    <!--
+        ============================================================
+        ADAPT OS — STUDENT EDITION
+        Main Application HTML
+        ============================================================
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="app.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================================================
+         APPLICATION WRAPPER
+         ========================================================= -->
+
+    <div class="app-shell" id="app">
+
+        <!-- =====================================================
+             SIDEBAR
+             ===================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+<div class="brand-mark">
+    <img src="logo.png" height="40px" width="40px" style="border-radius:10px ;">
+                </div>
+
+                <div class="brand-text">
+                    <h1>ADAPT OS</h1>
+                    <span>Student Edition</span>
+                </div>
+            </div>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+            <nav class="main-navigation" aria-label="Main navigation">
+
+                <p class="nav-heading">WORKSPACE</p>
+
+                <button
+                    class="nav-item active"
+                    data-page="dashboard"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                    
+                </button>
+                
+                <button class="nav-item">
+                    <span class="nav-icon">G</span>
+                    <span><a href="google.html">Google Mode</a></span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="subjects"
+                >
+                    <span class="nav-icon">▣</span>
+                    <span>Subjects</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="assignments"
+                >
+                    <span class="nav-icon">✓</span>
+                    <span>Assignments</span>
+                    <span class="nav-badge">3</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="practice"
+                >
+                    <span class="nav-icon">?</span>
+                    <span>Practice</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="exams"
+                >
+                    <span class="nav-icon">▤</span>
+                    <span>Exams</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="results"
+                >
+                    <span class="nav-icon">◒</span>
+                    <span>Results</span>
+                </button>
+
+
+                <p class="nav-heading">PRODUCTIVITY</p>
+
+                <button
+                    class="nav-item"
+                    data-page="notes"
+                >
+                    <span class="nav-icon">▤</span>
+                    <span>Notes</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="planner"
+                >
+                    <span class="nav-icon">□</span>
+                    <span>Planner</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="focus"
+                >
+                    <span class="nav-icon">◷</span>
+                    <span>Focus Mode</span>
+                </button>
+
+
+                <p class="nav-heading">INTELLIGENCE</p>
+
+                <button
+                    class="nav-item research-nav"
+                    data-page="research"
+                >
+                    <span class="nav-icon">⌕</span>
+                    <span>Research Lab</span>
+                    <span class="new-badge">NEW</span>
+                </button>
+
+
+                <p class="nav-heading">TOOLS</p>
+
+                <button
+                    class="nav-item"
+                    data-page="tools"
+                >
+                    <span class="nav-icon">⌘</span>
+                    <span>Student Toolbox</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="code"
+                >
+                    <span class="nav-icon">&lt;/&gt;</span>
+                    <span>Code Lab</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="files"
+                >
+                    <span class="nav-icon">▱</span>
+                    <span>File Center</span>
+                </button>
+                
+                <button class="nav-item">
+                    <span class="nav-icon">🫂</span>
+                    <span><a href="index.html">Adapt OS<br><small>MVP</small></a></span>
+                </button>
+
+
+                <p class="nav-heading">INSIGHTS</p>
+
+                <button
+                    class="nav-item"
+                    data-page="analytics"
+                >
+                    <span class="nav-icon">↗</span>
+                    <span>Analytics</span>
+                </button>
+
+            </nav>
+
+            <!-- Sidebar bottom -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    class="nav-item"
+                    data-page="settings"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+
+                <div class="sidebar-profile">
+
+                    <div class="profile-avatar">
+                        E
+                    </div>
+
+                    <div class="profile-details">
+                        <strong id="sidebarUserName">
+                            Student
+                        </strong>
+
+                        <span>
+                            Student Account
+                        </span>
+                    </div>
+
+                    <button
+                        class="profile-menu"
+                        aria-label="Profile menu"
+                    >
+                        ⋮
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+             ===================================================== -->
+
+        <main class="main-area">
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button
+                        class="menu-toggle"
+                        id="menuToggle"
+                        aria-label="Open navigation"
+                    >
+                        ☰
+                    </button>
+
+                    <div class="breadcrumb">
+                        <span>ADAPT OS</span>
+                        <span class="breadcrumb-arrow">/</span>
+                        <strong id="currentPageName">
+                            Dashboard
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <button
+                        class="topbar-icon-button"
+                        id="globalSearchButton"
+                        aria-label="Search"
+                    >
+                        ⌕
+                    </button>
+
+                    <button
+                        class="topbar-icon-button notification-button"
+                        id="notificationButton"
+                        aria-label="Notifications"
+                    >
+                        🔔
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <button
+                        class="topbar-avatar"
+                        id="topbarAvatar"
+                    >
+                        E
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTAINER
+                 ================================================= -->
+
+            <div class="page-container">
+
+
+                <!-- =================================================
+                     DASHBOARD
+                     ================================================= -->
+
+                <section
+                    class="page active"
+                    id="dashboardPage"
+                    data-page-section="dashboard"
+                >
+
+                    <div class="hero-section">
+
+                        <div class="hero-content">
+
+                            <span class="eyebrow">
+                                STUDENT COMMAND CENTER
+                            </span>
+
+                            <h2>
+                                Welcome back,
+                                <span id="dashboardUserName">
+                                    Student
+                                </span>
+                                👋
+                            </h2>
+
+                            <p>
+                                Learn smarter, stay organized and build
+                                your capacity every day.
+                            </p>
+
+                            <div class="hero-actions">
+
+                                <button
+                                    class="primary-button"
+                                    data-page-link="subjects"
+                                >
+                                    Start Learning
+                                    <span>→</span>
+                                </button>
+
+                                <button
+                                    class="secondary-button"
+                                    data-page-link="research"
+                                >
+                                    Open Research Lab
+                                </button>
+                                <button class="secondary-button"><a href="google.html">Open Google Mode</a></button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-visual">
+
+                            <div class="orb orb-one"></div>
+                            <div class="orb orb-two"></div>
+
+                            <div class="hero-card">
+
+                                <span>
+                                    TODAY'S FOCUS
+                                </span>
+
+                                <strong>
+                                    Build your capacity.
+                                </strong>
+
+                                <div class="mini-progress">
+                                    <span style="width: 72%;"></span>
+                                </div>
+
+                                <small>
+                                    72% daily progress
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Quick statistics -->
+
+                    <div class="stats-grid">
+
+                        <article class="stat-card">
+                            <div class="stat-icon">▣</div>
+
+                            <div>
+                                <span>Subjects</span>
+                                <strong id="statSubjects">0</strong>
+                            </div>
+                        </article>
+
+
+                        <article class="stat-card">
+                            <div class="stat-icon">✓</div>
+
+                            <div>
+                                <span>Completed Tasks</span>
+                                <strong id="statTasks">0</strong>
+                            </div>
+                        </article>
+
+
+                        <article class="stat-card">
+                            <div class="stat-icon">◷</div>
+
+                            <div>
+                                <span>Study Hours</span>
+                                <strong id="statStudyHours">0h</strong>
+                            </div>
+                        </article>
+
+
+                        <article class="stat-card">
+                            <div class="stat-icon">★</div>
+
+                            <div>
+                                <span>Average Score</span>
+                                <strong id="statAverageScore">0%</strong>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+                    <!-- Dashboard grid -->
+
+                    <div class="dashboard-grid">
+
+
+                        <!-- Today's plan -->
+
+                        <section class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <span class="panel-label">
+                                        TODAY
+                                    </span>
+
+                                    <h3>
+                                        Your Study Plan
+                                    </h3>
+                                </div>
+
+                                <button
+                                    class="text-button"
+                                    data-page-link="planner"
+                                >
+                                    View planner →
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="study-plan-list"
+                                id="todayStudyPlan"
+                            >
+
+                                <div class="empty-state small">
+                                    <div class="empty-icon">□</div>
+
+                                    <h4>
+                                        Your study plan is empty
+                                    </h4>
+
+                                    <p>
+                                        Add your first study activity
+                                        from the Planner.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Upcoming -->
+
+                        <section class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <span class="panel-label">
+                                        DEADLINES
+                                    </span>
+
+                                    <h3>
+                                        Upcoming Work
+                                    </h3>
+                                </div>
+
+                                <button
+                                    class="text-button"
+                                    data-page-link="assignments"
+                                >
+                                    See all →
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="deadline-list"
+                                id="dashboardAssignments"
+                            >
+
+                                <div class="empty-state small">
+                                    <div class="empty-icon">✓</div>
+
+                                    <h4>
+                                        No upcoming deadlines
+                                    </h4>
+
+                                    <p>
+                                        You're all caught up.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Progress -->
+
+                        <section class="panel progress-panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <span class="panel-label">
+                                        PROGRESS
+                                    </span>
+
+                                    <h3>
+                                        Learning Progress
+                                    </h3>
+                                </div>
+
+                                <button
+                                    class="text-button"
+                                    data-page-link="analytics"
+                                >
+                                    Analytics →
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="subject-progress-list"
+                                id="dashboardProgress"
+                            >
+
+                                <div class="empty-state small">
+                                    <div class="empty-icon">◒</div>
+
+                                    <h4>
+                                        No subject progress yet
+                                    </h4>
+
+                                    <p>
+                                        Start learning to see your
+                                        progress here.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Quick launch -->
+
+                        <section class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <span class="panel-label">
+                                        QUICK ACCESS
+                                    </span>
+
+                                    <h3>
+                                        Launch an App
+                                    </h3>
+                                </div>
+
+                            </div>
+
+
+                            <div class="quick-launch-grid">
+
+                                <button
+                                    class="quick-launch"
+                                    data-page-link="practice"
+                                >
+                                    <span>?</span>
+                                    <strong>Practice</strong>
+                                    <small>Test yourself</small>
+                                </button>
+
+                                <button
+                                    class="quick-launch"
+                                    data-page-link="exams"
+                                >
+                                    
+                                    
+                                    <span>▤</span>
+                                    <strong>Exams</strong>
+                                    <small>Take an exam</small>
+                                </button>
+                                
+                                <button class="quick-launch">
+                                    <a href="index.html" style="color:blue; font-weight:bold;">Adapt OS<br><small>MVP</small></a>
+                                </button>
+
+                                <button
+                                    class="quick-launch"
+                                    data-page-link="notes"
+                                >
+                                    <span>▤</span>
+                                    <strong>Notes</strong>
+                                    <small>Capture ideas</small>
+                                </button>
+
+                                <button
+                                    class="quick-launch"
+                                    data-page-link="focus"
+                                >
+                                    <span>◷</span>
+                                    <strong>Focus</strong>
+                                    <small>Start a session</small>
+                                </button>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </section>
+                
+
+
+                <!-- =================================================
+                     SUBJECTS
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="subjectsPage"
+                    data-page-section="subjects"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                LEARNING CENTER
+                            </span>
+
+                            <h2>
+                                Your Subjects
+                            </h2>
+
+                            <p>
+                                Organize your learning and master
+                                every topic one step at a time.
+                            </p>
+                        </div>
+
+                        <button
+                            class="primary-button"
+                            id="addSubjectButton"
+                        >
+                            + Add Subject
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="subject-grid"
+                        id="subjectGrid"
+                    >
+
+                        <div class="empty-state">
+                            <div class="empty-icon">▣</div>
+
+                            <h3>
+                                No subjects yet
+                            </h3>
+
+                            <p>
+                                Create your first subject to begin
+                                building your learning workspace.
+                            </p>
+
+                            <button
+                                class="primary-button"
+                                id="emptyAddSubject"
+                            >
+                                Create Subject
+                            </button>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     ASSIGNMENTS
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="assignmentsPage"
+                    data-page-section="assignments"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                ACADEMIC WORK
+                            </span>
+
+                            <h2>
+                                Assignments
+                            </h2>
+
+                            <p>
+                                Manage your schoolwork, deadlines and
+                                completion status.
+                            </p>
+                        </div>
+
+                        <button
+                            class="primary-button"
+                            id="addAssignmentButton"
+                        >
+                            + New Assignment
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-bar">
+
+                        <button
+                            class="filter-button active"
+                            data-assignment-filter="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-assignment-filter="pending"
+                        >
+                            Pending
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-assignment-filter="completed"
+                        >
+                            Completed
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-assignment-filter="overdue"
+                        >
+                            Overdue
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="assignment-list"
+                        id="assignmentList"
+                    >
+
+                        <div class="empty-state">
+                            <div class="empty-icon">✓</div>
+
+                            <h3>
+                                No assignments
+                            </h3>
+
+                            <p>
+                                Add an assignment to start managing
+                                your academic workload.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     PRACTICE
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="practicePage"
+                    data-page-section="practice"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                KNOWLEDGE TRAINING
+                            </span>
+
+                            <h2>
+                                Practice Center
+                            </h2>
+
+                            <p>
+                                Test your knowledge and identify
+                                areas that need more attention.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="practice-selection">
+
+                        <div class="selection-card">
+
+                            <span class="large-icon">?</span>
+
+                            <h3>
+                                Start Practice
+                            </h3>
+
+                            <p>
+                                Select a subject and topic to begin
+                                a practice session.
+                            </p>
+
+
+                            <div class="form-group">
+
+                                <label for="practiceSubject">
+                                    Subject
+                                </label>
+
+                                <select id="practiceSubject">
+                                    <option value="">
+                                        Select subject
+                                    </option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="practiceTopic">
+                                    Topic
+                                </label>
+
+                                <select id="practiceTopic">
+                                    <option value="">
+                                        Select topic
+                                    </option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="practiceQuestionCount">
+                                    Questions
+                                </label>
+
+                                <select id="practiceQuestionCount">
+                                    <option value="5">5 Questions</option>
+                                    <option value="10">10 Questions</option>
+                                    <option value="20">20 Questions</option>
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                class="primary-button full-width"
+                                id="startPracticeButton"
+                            >
+                                Start Practice →
+                            </button>
+
+                        </div>
+
+
+                        <div class="practice-info-card">
+
+                            <span class="large-icon">★</span>
+
+                            <h3>
+                                Train. Test. Improve.
+                            </h3>
+
+                            <p>
+                                Your practice results will be
+                                calculated from your actual answers.
+                            </p>
+
+                            <div class="feature-list">
+
+                                <div>
+                                    <span>✓</span>
+                                    Automatic marking
+                                </div>
+
+                                <div>
+                                    <span>✓</span>
+                                    Instant results
+                                </div>
+
+                                <div>
+                                    <span>✓</span>
+                                    Answer review
+                                </div>
+
+                                <div>
+                                    <span>✓</span>
+                                    Progress tracking
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     EXAMS
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="examsPage"
+                    data-page-section="exams"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                EXAMINATION CENTER
+                            </span>
+
+                            <h2>
+                                Exams
+                            </h2>
+
+                            <p>
+                                Challenge yourself under real
+                                examination conditions.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="exam-grid"
+                        id="examGrid"
+                    >
+
+                        <div class="empty-state">
+                            <div class="empty-icon">▤</div>
+
+                            <h3>
+                                No exams available
+                            </h3>
+
+                            <p>
+                                Exam sets will appear here when
+                                they are available.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     RESULTS
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="resultsPage"
+                    data-page-section="results"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Results
+                            </h2>
+
+                            <p>
+                                Review your actual practice and
+                                examination performance.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-summary-grid">
+
+                        <article class="result-summary-card">
+                            <span>Average Score</span>
+                            <strong id="resultsAverage">
+                                0%
+                            </strong>
+                        </article>
+
+                        <article class="result-summary-card">
+                            <span>Exams Taken</span>
+                            <strong id="resultsExamCount">
+                                0
+                            </strong>
+                        </article>
+
+                        <article class="result-summary-card">
+                            <span>Questions Answered</span>
+                            <strong id="resultsQuestionCount">
+                                0
+                            </strong>
+                        </article>
+
+                        <article class="result-summary-card">
+                            <span>Best Score</span>
+                            <strong id="resultsBest">
+                                0%
+                            </strong>
+                        </article>
+
+                    </div>
+
+
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-label">
+                                    HISTORY
+                                </span>
+
+                                <h3>
+                                    Recent Results
+                                </h3>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="results-table-wrapper"
+                            id="resultsTable"
+                        >
+
+                            <div class="empty-state small">
+                                <div class="empty-icon">◒</div>
+
+                                <h4>
+                                    No results yet
+                                </h4>
+
+                                <p>
+                                    Complete a practice session or
+                                    exam to see your results.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </section>
+
+
+                <!-- =================================================
+                     RESEARCH LAB
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="researchPage"
+                    data-page-section="research"
+                >
+
+                    <div class="research-hero">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                INTELLIGENCE WORKSPACE
+                            </span>
+
+                            <h2>
+                                Research Lab
+                            </h2>
+
+                            <p>
+                                Explore questions, investigate topics,
+                                analyze documents and build stronger
+                                academic work.
+                            </p>
+
+                        </div>
+
+                        <div class="research-status">
+                            <span class="status-dot"></span>
+                            Research Workspace
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-layout">
+
+                        <section class="research-main panel">
+
+                            <div class="research-search">
+
+                                <textarea
+                                    id="researchInput"
+                                    placeholder="Ask a research question, explain an assignment, or describe what you want to investigate..."
+                                    rows="4"
+                                ></textarea>
+
+                                <div class="research-actions">
+
+                                    <button
+                                        class="secondary-button"
+                                        id="uploadResearchButton"
+                                    >
+                                        📎 Add Document
+                                    </button>
+
+                                    <input
+                                        type="file"
+                                        id="researchFileInput"
+                                        hidden
+                                        multiple
+                                    >
+
+                                    <button
+                                        class="primary-button"
+                                        id="researchButton"
+                                    >
+                                        Research →
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="research-workspace"
+                                id="researchWorkspace"
+                            >
+
+                                <div class="research-welcome">
+
+                                    <div class="research-logo">
+                                        ✦
+                                    </div>
+
+                                    <h3>
+                                        Your Research Workspace
+                                    </h3>
+
+                                    <p>
+                                        Ask questions, organize
+                                        information and develop
+                                        better academic understanding.
+                                    </p>
+
+                                    <div class="research-suggestions">
+
+                                        <button
+                                            data-research-prompt="Explain this topic in a simple way."
+                                        >
+                                            Explain a topic
+                                        </button>
+
+                                        <button
+                                            data-research-prompt="Help me understand this assignment."
+                                        >
+                                            Understand an assignment
+                                        </button>
+
+                                        <button
+                                            data-research-prompt="Summarize the important points about this topic."
+                                        >
+                                            Summarize information
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <aside class="research-sidebar">
+
+                            <section class="panel">
+
+                                <div class="panel-header">
+
+                                    <div>
+                                        <span class="panel-label">
+                                            RESEARCH
+                                        </span>
+
+                                        <h3>
+                                            Saved Work
+                                        </h3>
+                                    </div>
+
+                                </div>
+
+                                <div
+                                    id="savedResearchList"
+                                    class="saved-research-list"
+                                >
+
+                                    <div class="empty-state small">
+
+                                        <div class="empty-icon">
+                                            🔖
+                                        </div>
+
+                                        <h4>
+                                            Nothing saved
+                                        </h4>
+
+                                        <p>
+                                            Saved research will appear
+                                            here.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <section class="panel research-tips">
+
+                                <span class="panel-label">
+                                    RESEARCH SMARTER
+                                </span>
+
+                                <h3>
+                                    Build better answers.
+                                </h3>
+
+                                <p>
+                                    Ask clear questions, compare
+                                    information and keep useful
+                                    sources together.
+                                </p>
+
+                            </section>
+
+                        </aside>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     NOTES
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="notesPage"
+                    data-page-section="notes"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                KNOWLEDGE STORAGE
+                            </span>
+
+                            <h2>
+                                Notes
+                            </h2>
+
+                            <p>
+                                Capture ideas, lessons and important
+                                information.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="primary-button"
+                            id="newNoteButton"
+                        >
+                            + New Note
+                        </button>
+
+                    </div>
+
+
+                    <div class="notes-toolbar">
+
+                        <div class="search-field">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="search"
+                                id="notesSearch"
+                                placeholder="Search notes..."
+                            >
+
+                        </div>
+
+                        <select id="notesCategoryFilter">
+                            <option value="all">
+                                All Categories
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="notes-grid"
+                        id="notesGrid"
+                    >
+
+                        <div class="empty-state">
+                            <div class="empty-icon">▤</div>
+
+                            <h3>
+                                Your notebook is empty
+                            </h3>
+
+                            <p>
+                                Create your first note.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     PLANNER
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="plannerPage"
+                    data-page-section="planner"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                ORGANIZE YOUR TIME
+                            </span>
+
+                            <h2>
+                                Planner
+                            </h2>
+
+                            <p>
+                                Plan your studies, assignments and
+                                important events.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="primary-button"
+                            id="addPlannerEventButton"
+                        >
+                            + Add Activity
+                        </button>
+
+                    </div>
+
+
+                    <section class="calendar-panel panel">
+
+                        <div class="calendar-header">
+
+                            <button
+                                class="calendar-nav"
+                                id="previousMonth"
+                            >
+                                ←
+                            </button>
+
+                            <h3 id="calendarMonth">
+                                Month Year
+                            </h3>
+
+                            <button
+                                class="calendar-nav"
+                                id="nextMonth"
+                            >
+                                →
+                            </button>
+
+                        </div>
+
+
+                        <div class="calendar-weekdays">
+
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+
+                        </div>
+
+
+                        <div
+                            class="calendar-grid"
+                            id="calendarGrid"
+                        ></div>
+
+                    </section>
+
+
+                    <section class="panel planner-events">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-label">
+                                    SCHEDULE
+                                </span>
+
+                                <h3>
+                                    Upcoming Activities
+                                </h3>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="plannerEventList"
+                            class="planner-event-list"
+                        >
+
+                            <div class="empty-state small">
+                                <div class="empty-icon">□</div>
+
+                                <h4>
+                                    No scheduled activities
+                                </h4>
+
+                                <p>
+                                    Add something to your planner.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </section>
+
+
+                <!-- =================================================
+                     FOCUS MODE
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="focusPage"
+                    data-page-section="focus"
+                >
+
+                    <div class="focus-page">
+
+                        <span class="eyebrow">
+                            DEEP WORK
+                        </span>
+
+                        <h2>
+                            Focus Mode
+                        </h2>
+
+                        <p>
+                            Remove distractions and concentrate on
+                            the task in front of you.
+                        </p>
+
+
+                        <div class="focus-timer-card">
+
+                            <div class="focus-mode-label">
+                                <span id="focusModeLabel">
+                                    STUDY SESSION
+                                </span>
+                            </div>
+
+                            <div
+                                class="focus-timer"
+                                id="focusTimer"
+                            >
+                                25:00
+                            </div>
+
+                            <div class="focus-session-status">
+                                <span
+                                    class="status-dot"
+                                    id="focusStatusDot"
+                                ></span>
+
+                                <span id="focusStatus">
+                                    Ready to focus
+                                </span>
+                            </div>
+
+
+                            <div class="focus-controls">
+
+                                <button
+                                    class="secondary-button"
+                                    id="focusReset"
+                                >
+                                    Reset
+                                </button>
+
+                                <button
+                                    class="primary-button focus-start"
+                                    id="focusStart"
+                                >
+                                    Start Focus
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="focus-presets">
+
+                            <button
+                                class="focus-preset active"
+                                data-focus-minutes="25"
+                            >
+                                <strong>25</strong>
+                                <span>Pomodoro</span>
+                            </button>
+
+                            <button
+                                class="focus-preset"
+                                data-focus-minutes="45"
+                            >
+                                <strong>45</strong>
+                                <span>Deep Study</span>
+                            </button>
+
+                            <button
+                                class="focus-preset"
+                                data-focus-minutes="60"
+                            >
+                                <strong>60</strong>
+                                <span>Deep Work</span>
+                            </button>
+
+                            <button
+                                class="focus-preset"
+                                data-focus-minutes="90"
+                            >
+                                <strong>90</strong>
+                                <span>Long Session</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STUDENT TOOLBOX
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="toolsPage"
+                    data-page-section="tools"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                DIGITAL TOOLBOX
+                            </span>
+
+                            <h2>
+                                Student Toolbox
+                            </h2>
+
+                            <p>
+                                Useful tools for everyday learning.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tools-grid">
+
+                        <button
+                            class="tool-card"
+                            data-tool="calculator"
+                        >
+                            <span class="tool-icon">🧮</span>
+                            <strong>Calculator</strong>
+                            <small>Perform calculations</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="unit-converter"
+                        >
+                            <span class="tool-icon">⇄</span>
+                            <strong>Unit Converter</strong>
+                            <small>Convert measurements</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="percentage"
+                        >
+                            <span class="tool-icon">%</span>
+                            <strong>Percentage</strong>
+                            <small>Calculate percentages</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="stopwatch"
+                        >
+                            <span class="tool-icon">◷</span>
+                            <strong>Stopwatch</strong>
+                            <small>Track time</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="word-counter"
+                        >
+                            <span class="tool-icon">Aa</span>
+                            <strong>Word Counter</strong>
+                            <small>Analyze text</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="formula-reference"
+                        >
+                            <span class="tool-icon">Σ</span>
+                            <strong>Formula Reference</strong>
+                            <small>Useful formulas</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="randomizer"
+                        >
+                            <span class="tool-icon">⌘</span>
+                            <strong>Randomizer</strong>
+                            <small>Generate random values</small>
+                        </button>
+
+                        <button
+                            class="tool-card"
+                            data-tool="text-tools"
+                        >
+                            <span class="tool-icon">T</span>
+                            <strong>Text Tools</strong>
+                            <small>Work with text</small>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     CODE LAB
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="codePage"
+                    data-page-section="code"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                DEVELOPMENT LAB
+                            </span>
+
+                            <h2>
+                                Code Lab
+                            </h2>
+
+                            <p>
+                                Write HTML, CSS and JavaScript and
+                                see your work run in the browser.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="primary-button"
+                            id="runCodeButton"
+                        >
+                            ▶ Run Code
+                        </button>
+
+                    </div>
+
+
+                    <div class="code-lab">
+
+                        <div class="code-editor-panel">
+
+                            <div class="editor-header">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <button
+                                    class="editor-tab active"
+                                    data-editor="html"
+                                >
+                                    HTML
+                                </button>
+
+                                <button
+                                    class="editor-tab"
+                                    data-editor="css"
+                                >
+                                    CSS
+                                </button>
+
+                                <button
+                                    class="editor-tab"
+                                    data-editor="js"
+                                >
+                                    JavaScript
+                                </button>
+
+                            </div>
+
+
+                            <textarea
+                                id="htmlEditor"
+                                class="code-editor"
+                                spellcheck="false"
+                                aria-label="HTML editor"
+                            ><h1>Hello, ADAPT!</h1>
+<p>Start coding here.</p></textarea>
+
+
+                            <textarea
+                                id="cssEditor"
+                                class="code-editor hidden"
+                                spellcheck="false"
+                                aria-label="CSS editor"
+                            >body {
+    font-family: Arial, sans-serif;
+}</textarea>
+
+
+                            <textarea
+                                id="jsEditor"
+                                class="code-editor hidden"
+                                spellcheck="false"
+                                aria-label="JavaScript editor"
+                            >console.log("Hello from ADAPT OS");</textarea>
+
+                        </div>
+
+
+                        <div class="code-preview-panel">
+
+                            <div class="editor-header">
+                                <span>LIVE PREVIEW</span>
+
+                                <button
+                                    id="refreshPreview"
+                                    class="small-button"
+                                >
+                                    ↻ Refresh
+                                </button>
+                            </div>
+
+                            <iframe
+                                id="codePreview"
+                                title="Code preview"
+                                sandbox="allow-scripts"
+                            ></iframe>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     FILE CENTER
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="filesPage"
+                    data-page-section="files"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                PERSONAL FILE SPACE
+                            </span>
+
+                            <h2>
+                                File Center
+                            </h2>
+
+                            <p>
+                                Work with files you choose to open
+                                inside ADAPT OS.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="primary-button"
+                            id="chooseFilesButton"
+                        >
+                            + Choose Files
+                        </button>
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            hidden
+                            multiple
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="file-drop-zone"
+                        id="fileDropZone"
+                    >
+
+                        <div class="file-drop-icon">
+                            ↑
+                        </div>
+
+                        <h3>
+                            Choose or drop files
+                        </h3>
+
+                        <p>
+                            Select files from your device to work
+                            with them in the browser.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="file-list"
+                        id="fileList"
+                    >
+
+                        <div class="empty-state">
+                            <div class="empty-icon">▱</div>
+
+                            <h3>
+                                No files selected
+                            </h3>
+
+                            <p>
+                                Your selected files will appear here.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     ANALYTICS
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="analyticsPage"
+                    data-page-section="analytics"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                PERFORMANCE INTELLIGENCE
+                            </span>
+
+                            <h2>
+                                Analytics
+                            </h2>
+
+                            <p>
+                                Understand your learning habits and
+                                academic progress.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-stat-grid">
+
+                        <article class="analytics-card">
+                            <span>Study Sessions</span>
+                            <strong id="analyticsSessions">
+                                0
+                            </strong>
+                            <small>
+                                Total recorded sessions
+                            </small>
+                        </article>
+
+                        <article class="analytics-card">
+                            <span>Study Time</span>
+                            <strong id="analyticsStudyTime">
+                                0h
+                            </strong>
+                            <small>
+                                Recorded focus time
+                            </small>
+                        </article>
+
+                        <article class="analytics-card">
+                            <span>Tasks Completed</span>
+                            <strong id="analyticsTasks">
+                                0
+                            </strong>
+                            <small>
+                                Completed assignments
+                            </small>
+                        </article>
+
+                        <article class="analytics-card">
+                            <span>Average Score</span>
+                            <strong id="analyticsScore">
+                                0%
+                            </strong>
+                            <small>
+                                Practice and exam performance
+                            </small>
+                        </article>
+
+                    </div>
+
+
+                    <div class="analytics-grid">
+
+                        <section class="panel chart-panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <span class="panel-label">
+                                        ACTIVITY
+                                    </span>
+
+                                    <h3>
+                                        Weekly Study Activity
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="activity-chart"
+                                id="activityChart"
+                            >
+
+                                <div class="chart-placeholder">
+                                    Start studying to generate
+                                    your activity data.
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <span class="panel-label">
+                                        SUBJECTS
+                                    </span>
+
+                                    <h3>
+                                        Subject Performance
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <div
+                                id="subjectAnalytics"
+                                class="subject-analytics"
+                            >
+
+                                <div class="empty-state small">
+                                    <div class="empty-icon">◒</div>
+
+                                    <h4>
+                                        No data yet
+                                    </h4>
+
+                                    <p>
+                                        Complete learning activities
+                                        to generate analytics.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SETTINGS
+                     ================================================= -->
+
+                <section
+                    class="page"
+                    id="settingsPage"
+                    data-page-section="settings"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <span class="eyebrow">
+                                SYSTEM CONTROL
+                            </span>
+
+                            <h2>
+                                Settings
+                            </h2>
+
+                            <p>
+                                Customize your ADAPT OS experience.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-layout">
+
+                        <nav class="settings-navigation">
+
+                            <button
+                                class="settings-tab active"
+                                data-settings-section="appearance"
+                            >
+                                Appearance
+                            </button>
+
+                            <button
+                                class="settings-tab"
+                                data-settings-section="profile"
+                            >
+                                Profile
+                            </button>
+
+                            <button
+                                class="settings-tab"
+                                data-settings-section="notifications"
+                            >
+                                Notifications
+                            </button>
+
+                            <button
+                                class="settings-tab"
+                                data-settings-section="data"
+                            >
+                                Data
+                            </button>
+
+                            <button
+                                class="settings-tab"
+                                data-settings-section="about"
+                            >
+                                About
+                            </button>
+
+                        </nav>
+
+
+                        <div class="settings-content">
+
+                            <section
+                                class="settings-section active"
+                                data-settings-content="appearance"
+                            >
+
+                                <h3>
+                                    Appearance
+                                </h3>
+
+                                <p>
+                                    Personalize the look and feel
+                                    of ADAPT OS.
+                                </p>
+
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <strong>
+                                            Theme
+                                        </strong>
+
+                                        <small>
+                                            Choose your preferred
+                                            appearance.
+                                        </small>
+                                    </div>
+
+                                    <select id="themeSelect">
+
+                                        <option value="dark">
+                                            Dark
+                                        </option>
+
+                                        <option value="light">
+                                            Light
+                                        </option>
+
+                                        <option value="system">
+                                            System
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <strong>
+                                            Compact Interface
+                                        </strong>
+
+                                        <small>
+                                            Reduce spacing across
+                                            the application.
+                                        </small>
+                                    </div>
+
+                                    <label class="toggle">
+
+                                        <input
+                                            type="checkbox"
+                                            id="compactMode"
+                                        >
+
+                                        <span></span>
+
+                                    </label>
+
+                                </div>
+
+                            </section>
+
+
+                            <section
+                                class="settings-section"
+                                data-settings-content="profile"
+                            >
+
+                                <h3>
+                                    Student Profile
+                                </h3>
+
+                                <p>
+                                    Manage the information displayed
+                                    throughout your workspace.
+                                </p>
+
+
+                                <div class="form-group">
+
+                                    <label for="studentName">
+                                        Display Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="studentName"
+                                        placeholder="Enter your name"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="studentClass">
+                                        Class / Level
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="studentClass"
+                                        placeholder="e.g. SHS 2"
+                                    >
+
+                                </div>
+
+
+                                <button
+                                    class="primary-button"
+                                    id="saveProfileButton"
+                                >
+                                    Save Profile
+                                </button>
+
+                            </section>
+
+
+                            <section
+                                class="settings-section"
+                                data-settings-content="notifications"
+                            >
+
+                                <h3>
+                                    Notifications
+                                </h3>
+
+                                <p>
+                                    Control application notifications.
+                                </p>
+
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <strong>
+                                            Assignment Reminders
+                                        </strong>
+
+                                        <small>
+                                            Receive reminders for
+                                            upcoming deadlines.
+                                        </small>
+                                    </div>
+
+                                    <label class="toggle">
+
+                                        <input
+                                            type="checkbox"
+                                            id="assignmentNotifications"
+                                            checked
+                                        >
+
+                                        <span></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <strong>
+                                            Study Notifications
+                                        </strong>
+
+                                        <small>
+                                            Receive study and focus
+                                            reminders.
+                                        </small>
+                                    </div>
+
+                                    <label class="toggle">
+
+                                        <input
+                                            type="checkbox"
+                                            id="studyNotifications"
+                                            checked
+                                        >
+
+                                        <span></span>
+
+                                    </label>
+
+                                </div>
+
+                            </section>
+
+
+                            <section
+                                class="settings-section"
+                                data-settings-content="data"
+                            >
+
+                                <h3>
+                                    Data Management
+                                </h3>
+
+                                <p>
+                                    Manage the information stored
+                                    locally by ADAPT OS.
+                                </p>
+
+
+                                <div class="data-actions">
+
+                                    <button
+                                        class="secondary-button"
+                                        id="exportDataButton"
+                                    >
+                                        Export My Data
+                                    </button>
+
+                                    <button
+                                        class="secondary-button"
+                                        id="importDataButton"
+                                    >
+                                        Import Data
+                                    </button>
+
+                                    <input
+                                        type="file"
+                                        id="importDataInput"
+                                        accept=".json"
+                                        hidden
+                                    >
+
+                                    <button
+                                        class="danger-button"
+                                        id="clearDataButton"
+                                    >
+                                        Clear Application Data
+                                    </button>
+
+                                </div>
+
+                            </section>
+
+
+                            <section
+                                class="settings-section"
+                                data-settings-content="about"
+                            >
+
+                                <h3>
+                                    About ADAPT OS
+                                </h3>
+
+                                <p>
+                                    ADAPT OS Student Edition is a
+                                    student-focused digital workspace
+                                    designed to help learners organize,
+                                    study, research and build capacity.
+                                </p>
+
+                                <div class="about-version">
+                                    <span>Version</span>
+                                    <strong>1.0.0</strong>
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+            <footer class="app-footer">
+
+                <div class="footer-main">
+
+                    <div class="footer-brand">
+
+                        <img src="piccc.jpg" height="40px" width="40px" style="border-radius:14px;">
+                        <div>
+                            <strong>
+                                ADAPT OS
+                            </strong>
+
+                            <span>
+                                Student Edition
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+                        A modern student workspace built to help
+                        learners organize, research, practice,
+                        improve and build their capacity.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-bottom">
+
+                    <p>
+                        © 2026 ADAPT OS. All rights reserved.
+                    </p>
+
+                    <p>
+                        Developer:
+                        <strong>
+                            Emmanuel Pobee Okpoti
+                        </strong>
+                    </p>
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+         ========================================================= -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         GLOBAL SEARCH MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="searchModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card search-modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="panel-label">
+                        SEARCH
+                    </span>
+
+                    <h3>
+
+                        Search ADAPT OS
+                    </h3>
+                   
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal="searchModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="search-field large">
+
+<span>⌕</span>
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Search subjects, notes, assignments..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="global-search-results"
+                id="globalSearchResults"
+            >
+
+                <div class="empty-state small">
+              <div> <img src="piccc.jpg" class="empty-icon" style="border:2px solid #8885DC;"></div>
+                    <h4>
+                        Start searching
+                    </h4>
+
+                    <p>
+                        Results will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         NOTIFICATION PANEL
+         ========================================================= -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+        aria-hidden="true"
+    >
+
+        <div class="notification-header">
+
+            <div>
+                <span class="panel-label">
+                    UPDATES
+                </span>
+
+                <h3>
+                    Notifications
+                </h3>
+            </div>
+
+            <button
+                id="markNotificationsRead"
+                class="text-button"
+            >
+                Mark all read
+            </button>
+
+        </div>
+
+
+        <div
+            class="notification-list"
+            id="notificationList"
+        >
+
+            <div class="empty-state small">
+
+                <div class="empty-icon">
+                    ♢
+                </div>
+
+                <h4>
+                    You're all caught up
+                </h4>
+
+                <p>
+                    New notifications will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         SUBJECT MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="subjectModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="panel-label">
+                        LEARNING
+                    </span>
+
+                    <h3>
+                        Create Subject
+                    </h3>
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal="subjectModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="subjectForm">
+
+                <div class="form-group">
+
+                    <label for="subjectName">
+                        Subject Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subjectName"
+                        required
+                        placeholder="e.g. Mathematics"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subjectDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="subjectDescription"
+                        rows="3"
+                        placeholder="What are you learning?"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subjectTopics">
+                        Topics
+                    </label>
+
+                    <textarea
+                        id="subjectTopics"
+                        rows="4"
+                        placeholder="Enter one topic per line..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close-modal="subjectModal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Create Subject
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         ASSIGNMENT MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="assignmentModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="panel-label">
+                        ACADEMIC WORK
+                    </span>
+
+                    <h3>
+                        New Assignment
+                    </h3>
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal="assignmentModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="assignmentForm">
+
+                <div class="form-group">
+
+                    <label for="assignmentTitle">
+                        Assignment Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="assignmentTitle"
+                        required
+                        placeholder="e.g. Solve Chapter 4 questions"
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="assignmentSubject">
+                            Subject
+                        </label>
+
+                        <select
+                            id="assignmentSubject"
+                            required
+                        >
+                            <option value="">
+                                Select subject
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="assignmentPriority">
+                            Priority
+                        </label>
+
+                        <select id="assignmentPriority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="assignmentDeadline">
+                        Deadline
+                    </label>
+
+                    <input
+                        type="datetime-local"
+                        id="assignmentDeadline"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="assignmentDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="assignmentDescription"
+                        rows="4"
+                        placeholder="Add instructions or notes..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close-modal="assignmentModal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Add Assignment
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         NOTE MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="noteModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card note-modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="panel-label">
+                        KNOWLEDGE
+                    </span>
+
+                    <h3>
+                        New Note
+                    </h3>
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal="noteModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="noteForm">
+
+                <div class="form-group">
+
+                    <label for="noteTitle">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="noteTitle"
+                        required
+                        placeholder="Note title"
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="noteCategory">
+                            Category
+                        </label>
+
+                        <input
+                            type="text"
+                            id="noteCategory"
+                            placeholder="e.g. Mathematics"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="noteColor">
+                            Label
+                        </label>
+
+                        <select id="noteColor">
+
+                            <option value="default">
+                                Default
+                            </option>
+
+                            <option value="important">
+                                Important
+                            </option>
+
+                            <option value="idea">
+                                Idea
+                            </option>
+
+                            <option value="revision">
+                                Revision
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="noteContent">
+                        Content
+                    </label>
+
+                    <textarea
+                        id="noteContent"
+                        rows="10"
+                        required
+                        placeholder="Write your note..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close-modal="noteModal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Save Note
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PLANNER EVENT MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="plannerModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="panel-label">
+                        PLANNER
+                    </span>
+
+                    <h3>
+                        Add Activity
+                    </h3>
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal="plannerModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="plannerForm">
+
+                <div class="form-group">
+
+                    <label for="plannerTitle">
+                        Activity
+                    </label>
+
+                    <input
+                        type="text"
+                        id="plannerTitle"
+                        required
+                        placeholder="e.g. Study Physics"
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="plannerDate">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="plannerDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="plannerTime">
+                            Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="plannerTime"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="plannerType">
+                        Activity Type
+                    </label>
+
+                    <select id="plannerType">
+
+                        <option value="study">
+                            Study
+                        </option>
+
+                        <option value="assignment">
+                            Assignment
+                        </option>
+
+                        <option value="exam">
+                            Exam
+                        </option>
+
+                        <option value="event">
+                            Event
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close-modal="plannerModal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Add Activity
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         TOOL MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="toolModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card tool-modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="panel-label">
+                        STUDENT TOOLBOX
+                    </span>
+
+                    <h3 id="toolModalTitle">
+                        Tool
+                    </h3>
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal="toolModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                class="tool-workspace"
+                id="toolWorkspace"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PRACTICE / EXAM SESSION MODAL
+         ========================================================= -->
+
+    <div
+        class="modal fullscreen-modal"
+        id="assessmentModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-card assessment-card">
+
+            <header class="assessment-header">
+
+                <div>
+
+                    <span
+                        class="panel-label"
+                        id="assessmentType"
+                    >
+                        PRACTICE
+                    </span>
+
+                    <h3 id="assessmentTitle">
+                        Assessment
+                    </h3>
+
+                </div>
+
+
+                <div class="assessment-meta">
+
+                    <div>
+                        <small>QUESTION</small>
+                        <strong id="assessmentQuestionNumber">
+                            1 / 10
+                        </strong>
+                    </div>
+
+                    <div>
+                        <small>TIME</small>
+                        <strong id="assessmentTimer">
+                            00:00
+                        </strong>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <div class="assessment-progress">
+
+                <span id="assessmentProgressBar"></span>
+
+            </div>
+
+
+            <main class="assessment-body">
+
+                <div class="question-card">
+
+                    <span class="question-label">
+                        QUESTION
+                    </span>
+
+                    <h2 id="questionText">
+                        Question text
+                    </h2>
+
+
+                    <div
+                        class="answer-options"
+                        id="answerOptions"
+                    ></div>
+
+                </div>
+
+            </main>
+
+
+            <footer class="assessment-footer">
+
+                <button
+                    class="secondary-button"
+                    id="previousQuestion"
+                >
+                    ← Previous
+                </button>
+
+
+                <button
+                    class="primary-button"
+                    id="nextQuestion"
+                >
+                    Next →
+                </button>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         TOAST NOTIFICATIONS
+         ========================================================= -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- =========================================================
+         APPLICATION SCRIPT
+         ========================================================= -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>

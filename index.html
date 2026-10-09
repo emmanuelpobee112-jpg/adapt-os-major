@@ -1,0 +1,3386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6c5ce7">
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          
+          <meta name="google-site-verification" content="QeFD3ZmGfNaZEtqg_uvDTgmK_vIZS1AmYeyXnaJPy0Q" />
+
+    <meta name="description"
+          content= "Emmanuel Pobee Okpoti, developer of ADAPT OS - Your adaptive learning, productivity, finance and file management workspace.">
+          <meta name="keywords" content="ADAPT OS, Emmanuel Pobee Okpoti, Personal OS, Productivity app Ghana, Adaptive workspace">
+<meta name="author" content="Emmanuel Pobee Okpoti">
+    <title>ADAPT OS | Adaptive Workspace </title>
+    
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"Person",
+            "name":"Emmanuel Pobee Okpoti",
+            "url":"https://adapt-personal-app.netlify.app",
+            "jobTitle":"Frontend Developer & Builder of ADAPT OS",
+            "address":{"@type":"PostalAddress","addressLocality":"Accra","addressCountry":"GH"},
+            "sameAs":[
+                "https://www.linkedin.com/in/emmanuel-pobee-359718432",
+                "https://www.facebook.com/profile.php?id=61585641626567"
+            ]
+        }
+    </script>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     APP LOADING SCREEN
+========================================================= -->
+
+<div id="loadingScreen" class="loading-screen">
+    <img src="pic.jpg" height="70px" width="70px" class="logo">
+    <h2 style="text-shadow:0 2px 1px black; color:#8885DC;">ADAPT OS</h2>
+     <p>Preparing your workspace...</p>
+</div>
+
+
+<!-- =========================================================
+     APP
+========================================================= -->
+
+<div id="app" class="app hidden">
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside id="sidebar" class="sidebar">
+
+        <!-- Logo -->
+        <div class="brand">
+
+            <div class="brand-logo">
+
+                <!--
+                    LOGO SPACE
+
+                    To use your own logo, replace the A below with:
+
+                    <img src="images/logo.png"
+                         alt="ADAPT OS Logo">
+
+                    Example:
+                    <img src="logo.png" alt="ADAPT OS Logo">
+                -->
+
+                <span id="brandLogoText">A</span>
+
+                <img id="brandLogoImage"
+                     src="pic.png"
+                     alt="ADAPT OS Logo"
+                     class="hidde">
+            </div>
+
+            <div class="brand-information">
+                <h1 id="brandName">ADAPT OS</h1>
+                <span>Adaptive Workspace</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="main-navigation">
+
+            <p class="navigation-title">MAIN</p>
+
+            <button class="nav-item active"
+                    data-page="dashboard">
+
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="learning">
+
+                <span class="nav-icon">📚</span>
+                <span>Learning</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="research">
+
+                <span class="nav-icon">🔎</span>
+                <span>Research</span>
+
+            </button>
+
+
+<button class="nav-item">
+    <span class="nav-icon">G</span>
+    <span><a href="google.html">Google Mode</a></span>
+</button>
+
+            <button class="nav-item"
+                    data-page="files">
+
+                <span class="nav-icon">📁</span>
+                <span>File Vault</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="finance">
+
+                <span class="nav-icon">💰</span>
+                <span>Finance</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="reminders">
+
+                <span class="nav-icon">⏰</span>
+                <span>Reminders</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="media">
+
+                <span class="nav-icon">🖼️</span>
+                <span>Media</span>
+
+            </button>
+
+
+            <p class="navigation-title">PRODUCTIVITY</p>
+
+
+            <button class="nav-item"
+                    data-page="notes">
+
+                <span class="nav-icon">📝</span>
+                <span>Notes</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="tasks">
+
+                <span class="nav-icon">✓</span>
+                <span>Tasks</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="reports">
+
+                <span class="nav-icon">📊</span>
+                <span>Reports</span>
+
+            </button>
+            
+            <button class="nav-item">
+              <span class="nav-icon">✍️</span>
+              <span><a href="students.html">Adapt OS<br><small>Students Edition</small></a></span> 
+            </button>
+            
+            <button class="nav-item">
+                <span class="nav-icon">S</span>
+                <span><a href="studio.html">Studio</a></span>
+            </button>
+            
+            <button class="nav-item">
+                <span class="nav-icon">🐛</span>
+                <span><a href="snake.html">Snake </a></span>
+            </button>
+            
+            <button class="nav-item">
+                <span class="nav-icon">🧠</span>
+                <span><a href="chess.html">Chess </a></span>
+            </button>
+            
+            <button class="nav-item">
+                <span class="nav-icon">🤓</span>
+                <span><a href="commerce.html">Online-Shop</a></span>
+            </button>
+            
+            <button class="nav-item">
+                <span class="nav-icon">🔄</span>
+                <span><a href="translate.html">Translator</a></span>
+            </button>
+            
+            
+<button class="nav-item">
+    <span class="nav-icon">💻</span>
+    <span><a href="Microsoft.html">Microsoft</a></span>
+</button>
+
+
+            <p class="navigation-title">SYSTEM</p>
+
+
+            <button class="nav-item"
+                    data-page="editor">
+
+                <span class="nav-icon">🎨</span>
+                <span>Editor</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="settings">
+
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- Sidebar bottom -->
+        <div class="sidebar-bottom">
+
+            <div class="storage-status">
+
+                <div class="storage-header">
+                    <span>Local Storage</span>
+                    <span id="storagePercentage">0%</span>
+                </div>
+
+                <div class="storage-bar">
+                    <div id="storageProgress"></div>
+                </div>
+
+                <small>Your data is saved on this device.<br style="font-size:15px;"><b style="fofont-size:13px;"> Developer: Emmanuel Pobee Okpoti</b></small>
+                
+
+            </div>
+
+
+            <button id="sidebarThemeButton"
+                    class="sidebar-theme-button">
+
+                🌙
+                <span>Toggle Theme</span>
+                
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+            <button id="menuButton"
+                    class="menu-button"
+                    aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+
+            <div class="header-search">
+
+                <span>🔎</span>
+
+                <input type="text"
+                       id="globalSearch"
+                       placeholder="Search ADAPT OS...">
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button id="notificationButton"
+                        class="header-icon-button"
+                        title="Notifications">
+
+                    🔔
+
+                    <span id="notificationCount"
+                          class="notification-count hidden">
+                        0
+                    </span>
+
+                </button>
+
+
+                <button id="themeButton"
+                        class="header-icon-button"
+                        title="Change theme">
+
+                    🌙
+
+                </button>
+
+
+                <button id="profileButton"
+                        class="profile-button">
+
+                    <div id="headerProfileImage"
+                         class="profile-image">
+
+                        <span id="headerProfileInitial">U</span>
+
+                    </div>
+
+                    <div class="profile-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <small id="headerOccupation">
+                            Workspace
+                        </small>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTAINER
+        ================================================== -->
+
+        <div class="page-container">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section id="dashboardPage"
+                     class="page active-page">
+
+
+                <div class="welcome-section">
+
+                    <div>
+
+                        <span class="page-label">
+                            YOUR WORKSPACE
+                        </span>
+
+                        <h2>
+                            Welcome back,
+                            <span id="welcomeName">
+                                User
+                            </span> 👋
+                        </h2>
+
+                        <p id="welcomeMessage">
+                            Everything you need, intelligently organized in one place.
+                        </p>
+
+                    </div>
+
+
+                    <button class="primary-button"
+                            data-page-target="editor">
+
+                        ✨ Customize Workspace
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Dashboard Statistics -->
+
+                <div class="dashboard-statistics">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon balance-icon">
+                            💰
+                        </div>
+
+                        <div>
+
+                            <span>Total Balance</span>
+
+                            <h3 id="dashboardBalance">
+                                GH₵ 0.00
+                            </h3>
+
+                            <small id="balanceChange">
+                                No transactions yet
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon income-icon">
+                            ↗
+                        </div>
+
+                        <div>
+
+                            <span>Total Income</span>
+
+                            <h3 id="dashboardIncome">
+                                GH₵ 0.00
+                            </h3>
+
+                            <small>
+                                Recorded income
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon expense-icon">
+                            ↘
+                        </div>
+
+                        <div>
+
+                            <span>Total Expenses</span>
+
+                            <h3 id="dashboardExpenses">
+                                GH₵ 0.00
+                            </h3>
+
+                            <small>
+                                Recorded expenses
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon file-icon">
+                            📁
+                        </div>
+
+                        <div>
+
+                            <span>My Files</span>
+
+                            <h3 id="dashboardFileCount">
+                                0
+                            </h3>
+
+                            <small>
+                                Saved files
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Dashboard Grid -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- Quick Actions -->
+
+                    <div class="dashboard-card quick-actions-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span class="card-label">
+                                    QUICK ACTIONS
+                                </span>
+
+                                <h3>
+                                    What do you want to do?
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+
+                            <button class="quick-action"
+                                    data-page-target="files">
+
+                                <span>📤</span>
+
+                                <strong>
+                                    Upload File
+                                </strong>
+
+                                <small>
+                                    Save documents
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action"
+                                    data-page-target="finance">
+
+                                <span>💰</span>
+
+                                <strong>
+                                    Add Transaction
+                                </strong>
+
+                                <small>
+                                    Record money
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action"
+                                    data-page-target="reminders">
+
+                                <span>⏰</span>
+
+                                <strong>
+                                    New Reminder
+                                </strong>
+
+                                <small>
+                                    Never forget
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action"
+                                    data-page-target="notes">
+
+                                <span>📝</span>
+
+                                <strong>
+                                    Write Note
+                                </strong>
+
+                                <small>
+                                    Capture ideas
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action"
+                                    data-page-target="research">
+
+                                <span>🔎</span>
+
+                                <strong>
+                                    Research
+                                </strong>
+
+                                <small>
+                                    Find answers
+                                </small>
+
+                            </button>
+
+
+<button class="quick-action">
+<a href="students.html">Adapt OS<br><small>Student Edition</small></a>
+</button>
+
+<button class="quick-action">
+    <span>🐛</span>
+    <strong><a href="snake.html">Snake Game</a></strong>
+    <small>Play Game</small>
+</button>
+
+<button class="quick-action">
+    <span>🧠</span>
+    <strong><a href="chess.html">Chess Game</a></strong>
+    <small>Play Chess</small>
+</button>
+                            <button class="quick-action"
+                                    data-page-target="learning">
+
+                                <span>📚</span>
+
+                                <strong>
+                                    Start Learning
+                                </strong>
+
+                                <small>
+                                    Study smarter
+                                </small>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Recent Activity -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span class="card-label">
+                                    ACTIVITY
+                                </span>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+
+                            </div>
+
+                            <button id="clearActivityButton"
+                                    class="text-button">
+
+                                Clear
+
+                            </button>
+
+                        </div>
+
+
+                        <div id="recentActivity"
+                             class="activity-list">
+
+                            <div class="empty-state">
+
+                                <span>📋</span>
+
+                                <p>
+                                    No activity yet.
+                                </p>
+
+                                <small>
+                                    Your activities will appear here.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Upcoming Reminders -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span class="card-label">
+                                    REMINDERS
+                                </span>
+
+                                <h3>
+                                    Upcoming
+                                </h3>
+
+                            </div>
+
+                            <button class="text-button"
+                                    data-page-target="reminders">
+
+                                View All
+
+                            </button>
+
+                        </div>
+
+
+                        <div id="dashboardReminders"
+                             class="reminder-preview">
+
+                            <div class="empty-state">
+
+                                <span>⏰</span>
+
+                                <p>
+                                    No upcoming reminders.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Financial Overview -->
+
+                    <div class="dashboard-card finance-overview-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span class="card-label">
+                                    FINANCE
+                                </span>
+
+                                <h3>
+                                    Financial Overview
+                                </h3>
+
+                            </div>
+
+                            <button class="text-button"
+                                    data-page-target="finance">
+
+                                Manage
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="finance-bars">
+
+                            <div class="finance-bar-item">
+
+                                <div>
+                                    <span>Income</span>
+                                    <strong id="dashboardIncomeBar">
+                                        GH₵ 0
+                                    </strong>
+                                </div>
+
+                                <div class="bar">
+                                    <div id="incomeBar"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="finance-bar-item">
+
+                                <div>
+                                    <span>Expenses</span>
+                                    <strong id="dashboardExpenseBar">
+                                        GH₵ 0
+                                    </strong>
+                                </div>
+
+                                <div class="bar">
+                                    <div id="expenseBar"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LEARNING PAGE
+            ================================================== -->
+
+            <section id="learningPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            LEARNING CENTER
+                        </span>
+
+                        <h2>
+                            Learn Anything
+                        </h2>
+
+                        <p>
+                            Explore subjects, study materials and practice questions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-search">
+
+                    <span>🔎</span>
+
+                    <input type="text"
+                           id="subjectSearch"
+                           placeholder="Search subjects or topics...">
+
+                </div>
+
+
+                <div id="subjectsGrid"
+                     class="subjects-grid">
+
+
+                    <button class="subject-card"
+                            data-subject="Mathematics">
+
+                        <span>📐</span>
+
+                        <h3>Mathematics</h3>
+
+                        <p>
+                            Numbers, algebra, geometry and more.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="English">
+
+                        <span>📖</span>
+
+                        <h3>English</h3>
+
+                        <p>
+                            Grammar, writing, comprehension and literature.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="Science">
+
+                        <span>🔬</span>
+
+                        <h3>Science</h3>
+
+                        <p>
+                            Explore the world of science.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="Social Studies">
+
+                        <span>🌍</span>
+
+                        <h3>Social Studies</h3>
+
+                        <p>
+                            Society, culture, geography and citizenship.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="Business">
+
+                        <span>💼</span>
+
+                        <h3>Business</h3>
+
+                        <p>
+                            Business concepts and entrepreneurship.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="Accounting">
+
+                        <span>📊</span>
+
+                        <h3>Accounting</h3>
+
+                        <p>
+                            Accounts, ledgers and financial principles.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="Economics">
+
+                        <span>📈</span>
+
+                        <h3>Economics</h3>
+
+                        <p>
+                            Markets, resources and economic systems.
+                        </p>
+
+                    </button>
+
+
+                    <button class="subject-card"
+                            data-subject="ICT">
+
+                        <span>💻</span>
+
+                        <h3>ICT</h3>
+
+                        <p>
+                            Technology, computing and digital skills.
+                        </p>
+
+                    </button>
+
+                </div>
+
+
+                <div id="learningContent"
+                     class="learning-content hidden">
+
+                    <button id="backToSubjects"
+                            class="secondary-button">
+
+                        ← Back to Subjects
+
+                    </button>
+
+                    <div id="selectedSubjectContent"></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESEARCH PAGE
+            ================================================== -->
+
+            <section id="researchPage"
+                     class="page">
+
+
+                <div class="page-header centered-header">
+
+                    <span class="page-label">
+                        KNOWLEDGE SEARCH
+                    </span>
+
+                    <h2>
+                        Research Anything
+                    </h2>
+
+                    <p>
+                        Search for explanations, definitions, ideas and useful information.
+                    </p>
+
+                </div>
+
+
+                <div class="research-box">
+
+                    <span>🔎</span>
+
+                    <input type="text"
+                           id="researchInput"
+                           placeholder="Ask a question or search for something...">
+
+                    <button id="researchButton"
+                            class="primary-button">
+
+                        Search
+
+                    </button>
+
+                </div>
+
+
+                <div class="research-suggestions">
+
+                    <span>Try:</span>
+
+                    <button class="research-suggestion">
+                        What is photosynthesis?
+                    </button>
+
+                    <button class="research-suggestion">
+                        Explain inflation
+                    </button>
+
+                    <button class="research-suggestion">
+                        How does accounting work?
+                    </button>
+
+                </div>
+
+
+                <div id="researchResults"
+                     class="research-results">
+
+                    <div class="research-welcome">
+
+                        <span>🔎</span>
+
+                        <h3>
+                            What would you like to learn?
+                        </h3>
+
+                        <p>
+                            Enter a question above to begin.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FILE VAULT
+            ================================================== -->
+
+            <section id="filesPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            FILE VAULT
+                        </span>
+
+                        <h2>
+                            Your Files
+                        </h2>
+
+                        <p>
+                            Keep your important documents and resources organized.
+                        </p>
+
+                    </div>
+
+
+                    <button id="uploadFileButton"
+                            class="primary-button">
+
+                        📤 Upload Files
+
+                    </button>
+
+                </div>
+
+
+                <!-- Hidden file input -->
+
+                <input type="file"
+                       id="fileInput"
+                       multiple
+                       class="hidden"
+                       accept=".pdf,.doc,.docx,.txt,.csv,.xlsx,.xls,.ppt,.pptx,.jpg,.jpeg,.png,.gif,.webp,.mp4,.webm,.mp3,.wav">
+
+
+                <div class="file-toolbar">
+
+                    <div class="file-search">
+
+                        <span>🔎</span>
+
+                        <input type="text"
+                               id="fileSearch"
+                               placeholder="Search files...">
+
+                    </div>
+
+
+                    <select id="fileFilter">
+
+                        <option value="all">
+                            All Files
+                        </option>
+
+                        <option value="document">
+                            Documents
+                        </option>
+
+                        <option value="image">
+                            Images
+                        </option>
+
+                        <option value="video">
+                            Videos
+                        </option>
+
+                        <option value="audio">
+                            Audio
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="fileDropZone"
+                     class="file-drop-zone">
+
+                    <div>
+
+                        <span>📁</span>
+
+                        <h3>
+                            Drop files here
+                        </h3>
+
+                        <p>
+                            or click to browse your device
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="fileGrid"
+                     class="file-grid">
+
+                    <div class="empty-state large-empty">
+
+                        <span>📂</span>
+
+                        <h3>
+                            Your vault is empty
+                        </h3>
+
+                        <p>
+                            Upload your first file to get started.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FINANCE PAGE
+            ================================================== -->
+
+            <section id="financePage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            FINANCIAL CENTER
+                        </span>
+
+                        <h2>
+                            Your Money
+                        </h2>
+
+                        <p>
+                            Track income, expenses, accounts and financial activity.
+                        </p>
+
+                    </div>
+
+
+                    <button id="addTransactionButton"
+                            class="primary-button">
+
+                        + Add Transaction
+
+                    </button>
+
+                </div>
+
+
+                <!-- Finance statistics -->
+
+                <div class="finance-statistics">
+
+
+                    <div class="finance-stat-card">
+
+                        <span>
+                            Total Balance
+                        </span>
+
+                        <h3 id="financeBalance">
+                            GH₵ 0.00
+                        </h3>
+
+                    </div>
+
+
+                    <div class="finance-stat-card">
+
+                        <span>
+                            Income
+                        </span>
+
+                        <h3 id="financeIncome">
+                            GH₵ 0.00
+                        </h3>
+
+                    </div>
+
+
+                    <div class="finance-stat-card">
+
+                        <span>
+                            Expenses
+                        </span>
+
+                        <h3 id="financeExpenses">
+                            GH₵ 0.00
+                        </h3>
+
+                    </div>
+
+
+                    <div class="finance-stat-card">
+
+                        <span>
+                            Transactions
+                        </span>
+
+                        <h3 id="transactionCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Accounts -->
+
+                <div class="finance-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="card-label">
+                                ACCOUNTS
+                            </span>
+
+                            <h3>
+                                My Accounts
+                            </h3>
+
+                        </div>
+
+                        <button id="addAccountButton"
+                                class="secondary-button">
+
+                            + Account
+
+                        </button>
+
+                    </div>
+
+
+                    <div id="accountsGrid"
+                         class="accounts-grid">
+
+                        <div class="empty-state">
+
+                            <span>🏦</span>
+
+                            <p>
+                                No accounts added yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Transactions -->
+
+                <div class="finance-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="card-label">
+                                TRANSACTIONS
+                            </span>
+
+                            <h3>
+                                Recent Transactions
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="transaction-table-container">
+
+                        <table class="transaction-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Description
+                                    </th>
+
+                                    <th>
+                                        Type
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="transactionTableBody">
+
+                                <tr>
+
+                                    <td colspan="6">
+
+                                        <div class="empty-state">
+
+                                            <span>💳</span>
+
+                                            <p>
+                                                No transactions yet.
+                                            </p>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REMINDERS
+            ================================================== -->
+
+            <section id="remindersPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            PRODUCTIVITY
+                        </span>
+
+                        <h2>
+                            Reminders
+                        </h2>
+
+                        <p>
+                            Keep track of important things you don't want to forget.
+                        </p>
+
+                    </div>
+
+
+                    <button id="addReminderButton"
+                            class="primary-button">
+
+                        + New Reminder
+
+                    </button>
+
+                </div>
+
+
+                <div id="reminderList"
+                     class="reminder-list">
+
+                    <div class="empty-state large-empty">
+
+                        <span>⏰</span>
+
+                        <h3>
+                            No reminders
+                        </h3>
+
+                        <p>
+                            Create a reminder to stay organized.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MEDIA
+            ================================================== -->
+
+            <section id="mediaPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            MEDIA CENTER
+                        </span>
+
+                        <h2>
+                            Photos & Videos
+                        </h2>
+
+                        <p>
+                            Keep your visual memories and media organized.
+                        </p>
+
+                    </div>
+
+
+                    <button id="uploadMediaButton"
+                            class="primary-button">
+
+                        📤 Upload Media
+
+                    </button>
+
+                </div>
+
+
+                <input type="file"
+                       id="mediaInput"
+                       multiple
+                       accept="image/*,video/*"
+                       class="hidden">
+
+
+                <div id="mediaGallery"
+                     class="media-gallery">
+
+                    <div class="empty-state large-empty">
+
+                        <span>🖼️</span>
+
+                        <h3>
+                            Your gallery is empty
+                        </h3>
+
+                        <p>
+                            Upload photos or videos to begin.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NOTES
+            ================================================== -->
+
+            <section id="notesPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            NOTES
+                        </span>
+
+                        <h2>
+                            My Notes
+                        </h2>
+
+                        <p>
+                            Write down ideas, lessons, plans and important information.
+                        </p>
+
+                    </div>
+
+
+                    <button id="newNoteButton"
+                            class="primary-button">
+
+                        + New Note
+
+                    </button>
+
+                </div>
+
+
+                <div class="notes-layout">
+
+
+                    <div id="notesList"
+                         class="notes-list">
+
+                        <div class="empty-state">
+
+                            <span>📝</span>
+
+                            <p>
+                                No notes yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="noteEditor"
+                         class="note-editor">
+
+                        <input type="text"
+                               id="noteTitle"
+                               placeholder="Note title...">
+
+                        <textarea id="noteContent"
+                                  placeholder="Start writing..."></textarea>
+
+
+                        <div class="note-editor-actions">
+
+                            <button id="saveNoteButton"
+                                    class="primary-button">
+
+                                Save Note
+
+                            </button>
+
+                            <button id="deleteNoteButton"
+                                    class="danger-button">
+
+                                Delete
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TASKS
+            ================================================== -->
+
+            <section id="tasksPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            TASK MANAGER
+                        </span>
+
+                        <h2>
+                            My Tasks
+                        </h2>
+
+                        <p>
+                            Organize what needs to be done.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-input">
+
+                    <input type="text"
+                           id="taskInput"
+                           placeholder="What needs to be done?">
+
+                    <button id="addTaskButton"
+                            class="primary-button">
+
+                        Add Task
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-filters">
+
+                    <button class="task-filter active"
+                            data-filter="all">
+
+                        All
+
+                    </button>
+
+                    <button class="task-filter"
+                            data-filter="active">
+
+                        Active
+
+                    </button>
+
+                    <button class="task-filter"
+                            data-filter="completed">
+
+                        Completed
+
+                    </button>
+
+                </div>
+
+
+                <div id="taskList"
+                     class="task-list">
+
+                    <div class="empty-state">
+
+                        <span>✓</span>
+
+                        <p>
+                            No tasks yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REPORTS
+            ================================================== -->
+
+            <section id="reportsPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            ANALYTICS
+                        </span>
+
+                        <h2>
+                            Reports
+                        </h2>
+
+                        <p>
+                            Understand your activity and financial information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-grid">
+
+
+                    <div class="report-card">
+
+                        <span>💰</span>
+
+                        <h3>
+                            Financial Report
+                        </h3>
+
+                        <p>
+                            View your income, expenses and balances.
+                        </p>
+
+                        <button id="financialReportButton"
+                                class="secondary-button">
+
+                            Generate
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="report-card">
+
+                        <span>📁</span>
+
+                        <h3>
+                            File Report
+                        </h3>
+
+                        <p>
+                            See your stored files and media.
+                        </p>
+
+                        <button id="fileReportButton"
+                                class="secondary-button">
+
+                            Generate
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="report-card">
+
+                        <span>✓</span>
+
+                        <h3>
+                            Productivity Report
+                        </h3>
+
+                        <p>
+                            Review tasks and reminders.
+                        </p>
+
+                        <button id="productivityReportButton"
+                                class="secondary-button">
+
+                            Generate
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="report-card">
+
+                        <span>📊</span>
+
+                        <h3>
+                            Full Workspace Report
+                        </h3>
+
+                        <p>
+                            Get an overview of your ADAPT OS activity.
+                        </p>
+
+                        <button id="fullReportButton"
+                                class="primary-button">
+
+                            Generate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="reportOutput"
+                     class="report-output hidden">
+
+                    <div class="section-heading">
+
+                        <h3>
+                            Generated Report
+                        </h3>
+
+                        <button id="copyReportButton"
+                                class="secondary-button">
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <pre id="reportText"></pre>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EDITOR
+            ================================================== -->
+
+            <section id="editorPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            WORKSPACE EDITOR
+                        </span>
+
+                        <h2>
+                            Customize ADAPT OS
+                        </h2>
+
+                        <p>
+                            Make the workspace fit you, your profession or your organization.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="editor-grid">
+
+
+                    <!-- Profile -->
+
+                    <div class="editor-card">
+
+                        <div class="editor-card-heading">
+
+                            <span>👤</span>
+
+                            <div>
+
+                                <h3>
+                                    Profile
+                                </h3>
+
+                                <p>
+                                    Personalize your profile.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <label for="editorName">
+                            Your Name
+                        </label>
+
+                        <input type="text"
+                               id="editorName"
+                               placeholder="Enter your name">
+
+
+                        <label for="editorOccupation">
+                            Occupation
+                        </label>
+
+                        <select id="editorOccupation">
+
+                            <option value="Student">
+                                Student
+                            </option>
+
+                            <option value="Farmer">
+                                Farmer
+                            </option>
+
+                            <option value="Business">
+                                Business
+                            </option>
+
+                            <option value="Teacher">
+                                Teacher
+                            </option>
+
+                            <option value="Developer">
+                                Developer
+                            </option>
+
+                            <option value="Church">
+                                Church
+                            </option>
+
+                            <option value="Organization">
+                                Organization
+                            </option>
+
+                            <option value="Freelancer">
+                                Freelancer
+                            </option>
+
+                            <option value="Researcher">
+                                Researcher
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+
+                        <label for="editorOrganization">
+                            Organization / Workspace Name
+                        </label>
+
+                        <input type="text"
+                               id="editorOrganization"
+                               placeholder="e.g. My Business">
+
+
+                        <button id="saveProfileButton"
+                                class="primary-button">
+
+                            Save Profile
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Logo -->
+
+                    <div class="editor-card">
+
+                        <div class="editor-card-heading">
+
+                            <span>🎨</span>
+
+                            <div>
+
+                                <h3>
+                                    Logo
+                                </h3>
+
+                                <p>
+                                    Change your workspace logo.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div id="logoPreview"
+                             class="logo-preview">
+
+                            <span>
+                                A
+                            </span>
+
+                        </div>
+
+
+                        <input type="file"
+                               id="logoInput"
+                               accept="image/*"
+                               class="hidden">
+
+
+                        <button id="changeLogoButton"
+                                class="secondary-button">
+
+                            Upload Logo
+
+                        </button>
+
+
+                        <button id="removeLogoButton"
+                                class="danger-button">
+
+                            Remove Logo
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Appearance -->
+
+                    <div class="editor-card">
+
+                        <div class="editor-card-heading">
+
+                            <span>🖌️</span>
+
+                            <div>
+
+                                <h3>
+                                    Appearance
+                                </h3>
+
+                                <p>
+                                    Adjust how your workspace looks.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <label for="accentColor">
+                            Accent Color
+                        </label>
+
+                        <input type="color"
+                               id="accentColor"
+                               value="#635bff">
+
+
+                        <label>
+                            Interface Style
+                        </label>
+
+                        <div class="appearance-options">
+
+                            <button class="appearance-option active"
+                                    data-theme="light">
+
+                                ☀️
+                                <span>Light</span>
+
+                            </button>
+
+
+                            <button class="appearance-option"
+                                    data-theme="dark">
+
+                                🌙
+                                <span>Dark</span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Occupation -->
+
+                    <div class="editor-card">
+
+                        <div class="editor-card-heading">
+
+                            <span>🧩</span>
+
+                            <div>
+
+                                <h3>
+                                    Adaptive Workspace
+                                </h3>
+
+                                <p>
+                                    Choose how ADAPT OS should organize itself.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div id="occupationPreview"
+                             class="occupation-preview">
+
+                            <h4>
+                                Student Workspace
+                            </h4>
+
+                            <p>
+                                Learning tools and study features will be prioritized.
+                            </p>
+
+                        </div>
+
+
+                        <button id="applyOccupationButton"
+                                class="primary-button">
+
+                            Apply Workspace
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section id="settingsPage"
+                     class="page">
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-label">
+                            SYSTEM
+                        </span>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                        <p>
+                            Manage your ADAPT OS workspace.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-list">
+
+
+                    <div class="setting-item">
+
+                        <div>
+
+                            <h3>
+                                💾 Export Data
+                            </h3>
+
+                            <p>
+                                Download your workspace data as a backup.
+                            </p>
+
+                        </div>
+
+
+                        <button id="exportDataButton"
+                                class="secondary-button">
+
+                            Export
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="setting-item">
+
+                        <div>
+
+                            <h3>
+                                📥 Import Data
+                            </h3>
+
+                            <p>
+                                Restore previously exported workspace data.
+                            </p>
+
+                        </div>
+
+
+                        <input type="file"
+                               id="importDataInput"
+                               accept=".json"
+                               class="hidden">
+
+
+                        <button id="importDataButton"
+                                class="secondary-button">
+
+                            Import
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="setting-item">
+
+                        <div>
+
+                            <h3>
+                                🔔 Notifications
+                            </h3>
+
+                            <p>
+                                Allow ADAPT OS to request browser notifications.
+                            </p>
+
+                        </div>
+
+
+                        <button id="enableNotificationsButton"
+                                class="secondary-button">
+
+                            Enable
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="setting-item danger-setting">
+
+                        <div>
+
+                            <h3>
+                                🗑️ Clear Workspace
+                            </h3>
+
+                            <p>
+                                Permanently remove locally saved workspace data.
+                            </p>
+
+                        </div>
+
+
+                        <button id="clearDataButton"
+                                class="danger-button">
+
+                            Clear Data
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     MODALS
+========================================================= -->
+
+
+<!-- =========================================================
+     TRANSACTION MODAL
+========================================================= -->
+
+<div id="transactionModal"
+     class="modal hidden">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                data-close-modal="transactionModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-heading">
+
+            <span>💰</span>
+
+            <h2>
+                Add Transaction
+            </h2>
+
+            <p>
+                Record income or an expense.
+            </p>
+
+        </div>
+
+
+        <form id="transactionForm">
+
+            <label>
+                Type
+            </label>
+
+            <div class="transaction-type-buttons">
+
+                <button type="button"
+                        class="transaction-type active"
+                        data-type="income">
+
+                    Income
+
+                </button>
+
+                <button type="button"
+                        class="transaction-type"
+                        data-type="expense">
+
+                    Expense
+
+                </button>
+
+            </div>
+
+
+            <input type="hidden"
+                   id="transactionType"
+                   value="income">
+
+
+            <label for="transactionDescription">
+                Description
+            </label>
+
+            <input type="text"
+                   id="transactionDescription"
+                   placeholder="e.g. Salary"
+                   required>
+
+
+            <label for="transactionAmount">
+                Amount
+            </label>
+
+            <input type="number"
+                   id="transactionAmount"
+                   placeholder="0.00"
+                   min="0"
+                   step="0.01"
+                   required>
+
+
+            <label for="transactionCategory">
+                Category
+            </label>
+
+            <select id="transactionCategory">
+
+                <option value="General">
+                    General
+                </option>
+
+                <option value="Food">
+                    Food
+                </option>
+
+                <option value="Transport">
+                    Transport
+                </option>
+
+                <option value="Education">
+                    Education
+                </option>
+
+                <option value="Business">
+                    Business
+                </option>
+
+                <option value="Salary">
+                    Salary
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="transactionAccount">
+                Account
+            </label>
+
+            <select id="transactionAccount">
+
+                <option value="">
+                    Cash / General
+                </option>
+
+            </select>
+
+
+            <label for="transactionDate">
+                Date
+            </label>
+
+            <input type="date"
+                   id="transactionDate">
+
+
+            <div class="modal-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close-modal="transactionModal">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-button">
+
+                    Save Transaction
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ACCOUNT MODAL
+========================================================= -->
+
+<div id="accountModal"
+     class="modal hidden">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                data-close-modal="accountModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-heading">
+
+            <span>🏦</span>
+
+            <h2>
+                Add Account
+            </h2>
+
+            <p>
+                Add an account you want to track.
+            </p>
+
+        </div>
+
+
+        <form id="accountForm">
+
+            <label for="accountName">
+                Account Name
+            </label>
+
+            <input type="text"
+                   id="accountName"
+                   placeholder="e.g. MTN Mobile Money"
+                   required>
+
+
+            <label for="accountType">
+                Account Type
+            </label>
+
+            <select id="accountType">
+
+                <option value="Bank">
+                    Bank
+                </option>
+
+                <option value="Mobile Money">
+                    Mobile Money
+                </option>
+
+                <option value="Cash">
+                    Cash
+                </option>
+
+                <option value="Savings">
+                    Savings
+                </option>
+
+                <option value="Business">
+                    Business
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="accountBalance">
+                Starting Balance
+            </label>
+
+            <input type="number"
+                   id="accountBalance"
+                   value="0"
+                   min="0"
+                   step="0.01">
+
+
+            <div class="modal-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close-modal="accountModal">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-button">
+
+                    Add Account
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     REMINDER MODAL
+========================================================= -->
+
+<div id="reminderModal"
+     class="modal hidden">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                data-close-modal="reminderModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-heading">
+
+            <span>⏰</span>
+
+            <h2>
+                New Reminder
+            </h2>
+
+            <p>
+                Create something you want to remember.
+            </p>
+
+        </div>
+
+
+        <form id="reminderForm">
+
+            <label for="reminderTitle">
+                Reminder
+            </label>
+
+            <input type="text"
+                   id="reminderTitle"
+                   placeholder="e.g. Study Mathematics"
+                   required>
+
+
+            <label for="reminderDate">
+                Date
+            </label>
+
+            <input type="date"
+                   id="reminderDate"
+                   required>
+
+
+            <label for="reminderTime">
+                Time
+            </label>
+
+            <input type="time"
+                   id="reminderTime">
+
+
+            <label for="reminderRepeat">
+                Repeat
+            </label>
+
+            <select id="reminderRepeat">
+
+                <option value="none">
+                    Does not repeat
+                </option>
+
+                <option value="daily">
+                    Daily
+                </option>
+
+                <option value="weekly">
+                    Weekly
+                </option>
+
+                <option value="monthly">
+                    Monthly
+                </option>
+
+            </select>
+
+
+            <div class="modal-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close-modal="reminderModal">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-button">
+
+                    Save Reminder
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     FILE PREVIEW MODAL
+========================================================= -->
+
+<div id="filePreviewModal"
+     class="modal hidden">
+
+    <div class="modal-content file-preview-modal">
+
+        <button class="modal-close"
+                data-close-modal="filePreviewModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-heading">
+
+            <span>📄</span>
+
+            <h2 id="previewFileName">
+                File Preview
+            </h2>
+
+        </div>
+
+
+        <div id="filePreviewContent"
+             class="file-preview-content">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NOTIFICATION PANEL
+========================================================= -->
+
+<div id="notificationPanel"
+     class="notification-panel hidden">
+
+    <div class="notification-panel-header">
+
+        <h3>
+            Notifications
+        </h3>
+
+        <button id="markNotificationsRead">
+            Mark read
+        </button>
+
+    </div>
+
+
+    <div id="notificationList">
+
+        <div class="empty-state">
+
+            <span>🔔</span>
+
+            <p>
+                No notifications.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div id="toast"
+     class="toast">
+
+    <span id="toastIcon">
+        ✓
+    </span>
+
+    <span id="toastMessage">
+        Saved successfully.
+    </span>
+
+</div>
+
+
+
+<!-- =========================================================
+     CONFIRMATION MODAL
+========================================================= -->
+
+<div id="confirmModal"
+     class="modal hidden">
+
+    <div class="modal-content small-modal">
+
+        <div class="modal-heading">
+
+            <span>⚠️</span>
+
+            <h2 id="confirmTitle">
+                Are you sure?
+            </h2>
+
+            <p id="confirmMessage">
+                This action cannot be undone.
+            </p>
+
+        </div>
+
+
+        <div class="modal-actions">
+
+            <button id="confirmCancel"
+                    class="secondary-button">
+
+                Cancel
+
+            </button>
+
+            <button id="confirmAction"
+                    class="danger-button">
+
+                Continue
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     WHATSAPP HELP BUTTON
+========================================================= -->
+
+<a
+    href="https://wa.me/233203446793?text=Hello%20ADAPT%20OS%2C%20I%20need%20help."
+    id="whatsappHelpButton"
+    class="whatsapp-help-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact us on WhatsApp"
+    title="Need help?">
+
+    <svg
+        class="whatsapp-icon"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+
+        <path
+            d="M19.11 17.39c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.57-1.47-1.84-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.97 2.62 1.11 2.8c.14.18 1.91 2.92 4.63 4.09.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.61-.66 1.84-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"/>
+
+        <path
+            d="M16.01 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.46 1.71 6.4L3.13 28.8l6.55-1.72a12.76 12.76 0 0 0 6.33 1.67h.01c7.05 0 12.79-5.74 12.79-12.8S23.06 3.2 16.01 3.2zm0 23.41h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.89 1.02 1.04-3.79-.25-.39a10.61 10.61 0 1 1 8.9 4.87z"/>
+    </svg>
+
+    <span class="whatsapp-help-text">Need help?</span>
+
+</a>
+
+
+<!-- =========================================================
+     IDEA SPARK — FLOATING FEATURE
+========================================================= -->
+
+<div id="ideaSpark">
+
+    <!-- Floating Button -->
+    <button
+        id="ideaSparkButton"
+        class="idea-spark-button"
+        type="button"
+        aria-label="Open Idea Spark"
+        title="Idea Spark">
+
+        <span class="idea-spark-icon">💡</span>
+
+        <span class="idea-spark-label">
+            Idea Spark
+        </span>
+
+    </button>
+
+
+    <!-- Idea Spark Panel -->
+    <div
+        id="ideaSparkPanel"
+        class="idea-spark-panel"
+        aria-hidden="true">
+
+        <!-- Panel Header -->
+        <div class="idea-spark-header">
+
+            <div class="idea-spark-title">
+
+                <div class="idea-spark-title-icon">
+                    💡
+                </div>
+
+                <div>
+                    <strong>Idea Spark</strong>
+                    <small>Something new to explore</small>
+                </div>
+
+            </div>
+
+            <button
+                id="ideaSparkClose"
+                class="idea-spark-close"
+                type="button"
+                aria-label="Close Idea Spark">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- Idea Content -->
+        <div class="idea-spark-content">
+
+            <span
+                id="ideaSparkCategory"
+                class="idea-spark-category">
+                PROJECT IDEA
+            </span>
+
+            <h3 id="ideaSparkTitle">
+                What can we create today?
+            </h3>
+
+            <p id="ideaSparkText">
+                Tap the button below and let ADAPT OS give you something interesting to explore.
+            </p>
+
+        </div>
+
+
+        <!-- Actions -->
+        <div class="idea-spark-actions">
+
+            <button
+                id="newIdeaButton"
+                class="idea-spark-generate"
+                type="button">
+
+                ✨ New Idea
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="main.js"></script>
+<script>
+
+
+/* =========================================================
+   IDEA SPARK — FUNCTIONAL JAVASCRIPT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const ideaSparkButton =
+        document.getElementById("ideaSparkButton");
+
+    const ideaSparkPanel =
+        document.getElementById("ideaSparkPanel");
+
+    const ideaSparkClose =
+        document.getElementById("ideaSparkClose");
+
+    const newIdeaButton =
+        document.getElementById("newIdeaButton");
+
+    const ideaSparkCategory =
+        document.getElementById("ideaSparkCategory");
+
+    const ideaSparkTitle =
+        document.getElementById("ideaSparkTitle");
+
+    const ideaSparkText =
+        document.getElementById("ideaSparkText");
+
+
+    /* Safety check */
+
+    if (
+        !ideaSparkButton ||
+        !ideaSparkPanel ||
+        !ideaSparkClose ||
+        !newIdeaButton
+    ) {
+        return;
+    }
+
+
+    /* =====================================================
+       IDEAS
+    ===================================================== */
+
+    const ideas = [
+
+        {
+            category: "PROJECT IDEA",
+            title: "Build a smart student dashboard",
+            text: "Create a simple workspace that helps students track assignments, subjects, study time and upcoming exams."
+        },
+
+        {
+            category: "TECH IDEA",
+            title: "Create your own mini AI tool",
+            text: "Build a focused AI tool that solves one specific problem instead of trying to do everything."
+        },
+
+        {
+            category: "BUSINESS IDEA",
+            title: "Design a digital service",
+            text: "Think of a problem people around you have and design a small digital service that could solve it."
+        },
+
+        {
+            category: "CREATIVE IDEA",
+            title: "Create something nobody expects",
+            text: "Combine two completely different ideas and turn them into one useful digital product."
+        },
+
+        {
+            category: "LEARNING IDEA",
+            title: "Learn one thing deeply",
+            text: "Choose one topic you normally find difficult and spend 20 minutes understanding it from the basics."
+        },
+
+        {
+            category: "RESEARCH IDEA",
+            title: "Investigate a question",
+            text: "Choose something you have always wondered about and use ADAPT OS Research to investigate it."
+        },
+
+        {
+            category: "WEB IDEA",
+            title: "Build a useful website",
+            text: "Create a website for a real problem in your community, school or workplace."
+        },
+
+        {
+            category: "PRODUCT IDEA",
+            title: "Improve something you already use",
+            text: "Pick an app or service you use every day and design one feature that would make it better."
+        },
+
+        {
+            category: "CHALLENGE",
+            title: "Build something in one hour",
+            text: "Choose a small project and challenge yourself to create a working version within one hour."
+        },
+
+        {
+            category: "THINKING IDEA",
+            title: "Ask a better question",
+            text: "Take a problem you are facing and rewrite the question three different ways. A better question can reveal a better solution."
+        }
+
+    ];
+
+
+    let lastIdeaIndex = -1;
+
+
+    /* =====================================================
+       GENERATE IDEA
+    ===================================================== */
+
+    function generateIdea() {
+
+        let randomIndex;
+
+        do {
+
+            randomIndex =
+                Math.floor(
+                    Math.random() * ideas.length
+                );
+
+        } while (
+            randomIndex === lastIdeaIndex &&
+            ideas.length > 1
+        );
+
+        lastIdeaIndex = randomIndex;
+
+        const idea =
+            ideas[randomIndex];
+
+
+        ideaSparkCategory.textContent =
+            idea.category;
+
+        ideaSparkTitle.textContent =
+            idea.title;
+
+        ideaSparkText.textContent =
+            idea.text;
+
+
+        /* Small animation */
+
+        ideaSparkPanel.classList.remove(
+            "idea-spark-refresh"
+        );
+
+        void ideaSparkPanel.offsetWidth;
+
+        ideaSparkPanel.classList.add(
+            "idea-spark-refresh"
+        );
+    }
+
+
+    /* =====================================================
+       OPEN
+    ===================================================== */
+
+    ideaSparkButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+            const isOpen =
+                ideaSparkPanel.classList.contains("show");
+
+
+            if (isOpen) {
+
+                ideaSparkPanel.classList.remove(
+                    "show"
+                );
+
+                ideaSparkPanel.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+            } else {
+
+                generateIdea();
+
+                ideaSparkPanel.classList.add(
+                    "show"
+                );
+
+                ideaSparkPanel.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       NEW IDEA
+    ===================================================== */
+
+    newIdeaButton.addEventListener(
+        "click",
+        function () {
+
+            generateIdea();
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE
+    ===================================================== */
+
+    ideaSparkClose.addEventListener(
+        "click",
+        function () {
+
+            ideaSparkPanel.classList.remove(
+                "show"
+            );
+
+            ideaSparkPanel.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       CLICK OUTSIDE
+    ===================================================== */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                !event.target.closest(
+                    "#ideaSpark"
+                )
+            ) {
+
+                ideaSparkPanel.classList.remove(
+                    "show"
+                );
+
+                ideaSparkPanel.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ESC KEY
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                ideaSparkPanel.classList.remove(
+                    "show"
+                );
+
+                ideaSparkPanel.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+            }
+
+        }
+    );
+
+});
+</script>
+<script>
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        const whatsappButton =
+            document.getElementById("whatsappHelpButton");
+        
+        if (!whatsappButton) return;
+        
+        whatsappButton.addEventListener("click", function() {
+            console.log("Opening WhatsApp support...");
+        });
+        
+    });
+</script>
+</body>
+</html>
